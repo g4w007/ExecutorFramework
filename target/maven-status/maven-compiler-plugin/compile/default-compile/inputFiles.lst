@@ -1,5 +1,4 @@
+/workspaces/ExecutorFramework/src/main/java/com/example/executor_demo/service/AsyncService.java
 /workspaces/ExecutorFramework/src/main/java/com/example/executor_demo/ExecutorDemoApplication.java
-/workspaces/ExecutorFramework/src/main/java/com/example/executor_demo/config/AsyncConfig.java
 /workspaces/ExecutorFramework/src/main/java/com/example/executor_demo/config/TaskExecutorConfig.java
 /workspaces/ExecutorFramework/src/main/java/com/example/executor_demo/controller/AsyncController.java
-/workspaces/ExecutorFramework/src/main/java/com/example/executor_demo/service/AsyncService.java
