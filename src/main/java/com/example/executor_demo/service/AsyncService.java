@@ -11,10 +11,12 @@ import java.util.concurrent.CompletableFuture;
 public class AsyncService {
 
     private final TaskExecutor taskExecutor;
+    private final UserService userService;
 
     @Autowired
-    public AsyncService(TaskExecutor taskExecutor) {
+    public AsyncService(TaskExecutor taskExecutor, UserService userService) {
         this.taskExecutor = taskExecutor;
+        this.userService = userService;
     }
 
     @Async
@@ -26,12 +28,8 @@ public class AsyncService {
     public CompletableFuture<String> performTask() {
         return CompletableFuture.supplyAsync(() -> {
             // Simulate a long-running task
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
-            return "Task Completed";
+            String userDetails = userService.getUser();
+            return "Task completed with user: " + userDetails;
         }, taskExecutor);
     }
 }
